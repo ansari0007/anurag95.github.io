@@ -11,7 +11,7 @@ count_f = 0
 count_n = 0
 tagged_reviews = []
 min_votes = 4
-threshold = 100
+threshold = 10
 
 def create_tfidf_training_data(docs):
     """

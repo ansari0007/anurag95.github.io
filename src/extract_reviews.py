@@ -11,7 +11,7 @@ count_f = 0
 count_n = 0
 tagged_reviews = []
 min_votes = 4
-threshold = 10
+threshold = 50000
 
 def create_tfidf_training_data(docs):
     """
@@ -40,7 +40,7 @@ def train_svm(X, y):
     """
     Create and train the Support Vector Machine.
     """
-    svm = SVC(C=1000000.0, gamma=0.0, kernel='rbf')
+    svm = SVC(C=1.0, kernel='linear')
     svm.fit(X, y)
     return svm
 
@@ -54,6 +54,9 @@ for line in open('../dataset/yelp_academic_dataset_review.json', 'r'):
 		tagged_reviews.append((0, review['text']))
 	if count_f == threshold and count_n == threshold:
 		break
+
+print "Review Extraction Done...\r\n"
+print "Starting SVM...\r\n"
 
 '''
 t_funny = []
@@ -69,7 +72,7 @@ overall_score = 0
 
 # Vectorise and TF-IDF transform the corpus 
 
-for (i, k) in [(5, 0.2), (4, 0.25), (3, 0.33)]:
+for (i, k) in [(5, 0.2)]:
     
     print str(i)+"-fold:",
 
@@ -85,10 +88,10 @@ for (i, k) in [(5, 0.2), (4, 0.25), (3, 0.33)]:
     pred = svm.predict(X_test)
 
     # Output the hit-rate and the confusion matrix for each model
-    print round(svm.score(X_test, y_test), 2)
+    # print round(svm.score(X_test, y_test), 2)
     overall_score += svm.score(X_test, y_test)
 
 print "Overall Accuracy:",
-print round(overall_score/3, 2)
+print round(overall_score, 2)
 
 

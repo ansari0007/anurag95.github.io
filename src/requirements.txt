@@ -1,1 +1,9 @@
 sudo apt-get install python-sklearn
+sudo apt-get install python-numpy
+sudo apt-get install python-scipy
+
+
+To install Keras Library with Theano back-end
+
+sudo pip install git+git://github.com/Theano/Theano.git
+sudo pip install keras

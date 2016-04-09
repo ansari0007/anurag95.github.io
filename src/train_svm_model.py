@@ -9,7 +9,7 @@ from sklearn.svm import SVC
 
 #import dataset
 from reviews import *
-size = 20000
+size = 100000
 tagged_reviews = tagged_reviews[:size]
 
 def create_tfidf_training_data(docs):

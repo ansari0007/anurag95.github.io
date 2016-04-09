@@ -9,6 +9,8 @@ from sklearn.svm import SVC
 
 #import dataset
 from reviews import *
+size = 20000
+tagged_reviews = tagged_reviews[:size]
 
 def create_tfidf_training_data(docs):
     """
@@ -41,29 +43,14 @@ def train_svm(X, y):
     svm.fit(X, y)
     return svm
 
-overall_score = 0
+shuffle(tagged_reviews)
+X, y = create_tfidf_training_data(tagged_reviews)
 
-# Vectorise and TF-IDF transform the corpus 
+# writing number of features from tf-idf to file 
+with open("tfidf_features.py", "w") as f:
+    f.write("tfidf_features = " + str(X.shape[1]))
+svm = train_svm(X, y)
 
-for (i, k) in [(5, 0.2)]:
-    
-    print str(i)+"-fold:",
-
-    shuffle(tagged_reviews)
-    X, y = create_tfidf_training_data(tagged_reviews)
-    # Create the training-test split of the data
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=k, random_state=42)
-
-    # Create and train the Support Vector Machine
-    svm = train_svm(X_train, y_train)
-
-    # Make an array of predictions on the test set
-    pred = svm.predict(X_test)
-
-    # Output the hit-rate and the confusion matrix for each model
-    # print round(svm.score(X_test, y_test), 2)
-    overall_score += svm.score(X_test, y_test)
-
-print "Overall Accuracy:",
-print round(overall_score, 2)
-
+# saving model to file
+from sklearn.externals import joblib
+joblib.dump(svm, 'svm_model.pkl')

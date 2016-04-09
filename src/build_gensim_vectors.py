@@ -7,7 +7,9 @@ import nltk
 import numpy as np
 #shuffle(tagged_reviews)
 
-tagged_reviews = tagged_reviews[:10000]
+size = 100000
+
+tagged_reviews = tagged_reviews[:size]
 sentences = []
 for label, review in tagged_reviews:
 	review = nltk.word_tokenize(review)
@@ -28,4 +30,5 @@ for label, review in tagged_reviews:
 	review_vector = review_vector/len(review)
 	final.append((label, list(review_vector)))
 
+print "word_vectors =",
 print final

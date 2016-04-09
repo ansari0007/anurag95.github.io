@@ -1,2 +1,7 @@
 dataset/*
 dataset
+src/*.pkl
+src/*.npy
+src/word_vectors.py
+src/*.pyc
+src/test_vectors.py

@@ -1,0 +1,10 @@
+Total error: 0.00945965866938
+epoch:    1   train error:  1.83%   test error:  1.64%
+Total error: 0.00899670718815
+epoch:    2   train error:  1.83%   test error:  1.64%
+Total error: 0.00897918277145
+epoch:    3   train error:  1.83%   test error:  1.64%
+Total error: 0.00897594454817
+epoch:    4   train error:  1.83%   test error:  1.64%
+Total error: 0.0089681405617
+epoch:    5   train error:  1.83%   test error:  1.64%

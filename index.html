@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Major Project - Information Retrieval and Extraction by anurag95</title>
+    <title>Information Retrieval and Extraction Major Project by anurag95</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -11,7 +11,7 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">Major Project - Information Retrieval and Extraction</h1>
+      <h1 class="project-name">Information Retrieval and Extraction Major Project</h1>
       <h2 class="project-tagline">Humor Detection for Yelp Reviews</h2>
     </section>
 
@@ -56,6 +56,8 @@ expressive in the context of Yelp.<br>
 <p>Made feature vectors using Tf-Idf Vectorization and fed this to SVM classifier with linear kernel and got 85.0% accuracy.
 The SVM train function from scikit library of python was used for this.</p>
 
+<p><img src="svm_acc.png"></p>
+
 <h3>
 <a id="deep-feedforward-neural-network" class="anchor" href="#deep-feedforward-neural-network" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Deep Feedforward Neural Network</h3>
 
@@ -64,7 +66,7 @@ The SVM train function from scikit library of python was used for this.</p>
 <h3>
 <a id="convolutional-neural-networks" class="anchor" href="#convolutional-neural-networks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Convolutional Neural Networks</h3>
 
-<p>For each review,we concatenated the vectors for each word, making a 2D array as input to the network, truncated at 150 words. The input was convoluted with filters of size 3, 4, 5, 6 and width same as that of the input. Using 1-max pooling for each filter, we get a 1D vector which is fed as input to the softmax layer which classifies the review.</p>
+<p>The input was convoluted with filters of size 3,4,5,6 and width same as that of the input. We trained CNN for 20 epochs with a batch size of 100. Using 1-max pooling for each filter, we get a 1D vector. This vector is the input to the softmax layer which classifies the review as funny or not funny. The accuracy was </p>
 
 <h3>
 <a id="references-" class="anchor" href="#references-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>References ­</h3>

@@ -1,28 +1,29 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<!doctype html>
+<html>
   <head>
-    <meta charset="UTF-8">
-    <title>Anurag95.GitHub.io by anurag95</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Major Project - Information Retrieval and Extraction by anurag95</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
   <body>
-    <section class="page-header">
-      <h1 class="project-name">Anurag95.GitHub.io</h1>
-      <h2 class="project-tagline">Humor Detection for Yelp Reviews</h2>
-    </section>
+    <div class="wrapper">
+      <header>
+        <h1>Major Project - Information Retrieval and Extraction</h1>
+        <p>Humor Detection for Yelp Reviews</p>
 
-    <section class="main-content">
-      <p>Information Retrieval and Extraction
-Major Project  </p>
 
-<p>First Deliverable ­ Scope 
-Humour detection in Yelp reviews using Deep Learning </p>
+        <p class="view"><a href="https://github.com/anurag95">View My GitHub Profile</a></p>
 
-<h3>
+      </header>
+      <section>
+        <h3>
 <a id="problem-statement" class="anchor" href="#problem-statement" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Problem Statement:</h3>
 
 <p>Our problem is to predict community determined humor in Yelp reviews. Yelp reviews can be 
@@ -32,23 +33,34 @@ learning techniques. </p>
 <h3>
 <a id="applications--" class="anchor" href="#applications--" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Applications  ­</h3>
 
-<p>Yelp is a service whose utility relies on being able to provide an accurate, crowd­sourced 
+<p>Yelp is a service whose utility relies on being able to provide an accurate, crowd sourced 
 opinion of a place of business. So it’s important to determine which reviews provide valuable 
 insight into a business. Humor could play an important role in this determination and help 
 consumers to get to informative reviews and not waste time on reviews which have nothing to 
-provide. So, our project would help in correctly identifying humor. 
-Challenges ­ 
-We cannot have an idea whether or not our models can be extended out­of­domain. This is 
+provide. So, our project would help in correctly identifying humor.</p>
+
+<h3>
+<a id="challenges-" class="anchor" href="#challenges-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Challenges ­</h3>
+
+<p>We cannot have an idea whether or not our models can be extended out of ­domain. This is 
 because there is no labeled corpus of funny texts – partially due to the subjectivity associated 
 with imposing a binary outcome on something such as humor. Some work has been done 
-applying similar methods to Twitter, but no large, labelled datasets exist for thorough validation. 
-Second Deliverables Details ­<br>
-Pre­processing ­<br>
-1. Tokenize the reviews, without removing stop words or punctuations, as they are quite 
+applying similar methods to Twitter, but no large, labelled datasets exist for thorough validation. </p>
+
+<h3>
+<a id="preprocessing-" class="anchor" href="#preprocessing-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pre­processing ­</h3>
+
+<ol>
+<li>Tokenize the reviews, without removing stop words or punctuations, as they are quite 
 expressive in the context of Yelp.<br>
-2. Build word vectors using gensim package. 
-Shallow Algorithms ­<br>
-Explore shallow algorithms before moving to Deep Learning. We will apply SVM on bag of 
+</li>
+<li>Build word vectors using gensim package.</li>
+</ol>
+
+<h3>
+<a id="shallow-algorithms-" class="anchor" href="#shallow-algorithms-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Shallow Algorithms ­</h3>
+
+<p>Explore shallow algorithms before moving to Deep Learning. We will apply SVM on bag of 
 words. Evaluation ­<br>
 We convert the above mentioned problem into the binary classification regime. After balancing 
 the classes according to funny and not­funny, we optimize the classical log­likelihood and report 
@@ -71,14 +83,12 @@ References ­<br>
 1. Oliveira and Rodrigo, Humor Detection in Yelp reviews 
 URL: ​
 <a href="https://cs224d.stanford.edu/reports/OliveiraLuke.pdf">https://cs224d.stanford.edu/reports/OliveiraLuke.pdf</a>  </p>
-
-      <footer class="site-footer">
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </section>
+      <footer>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
-
-    </section>
-
-  
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
   </body>
 </html>

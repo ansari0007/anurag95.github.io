@@ -58,29 +58,23 @@ expressive in the context of Yelp.<br>
 </ol>
 
 <h3>
-<a id="shallow-algorithms-" class="anchor" href="#shallow-algorithms-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Shallow Algorithms ­</h3>
+<a id="svm-on-bag-of-words-" class="anchor" href="#svm-on-bag-of-words-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SVM on Bag of Words ­</h3>
 
-<p>Explore shallow algorithms before moving to Deep Learning. We will apply SVM on bag of 
-words. Evaluation ­<br>
-We convert the above mentioned problem into the binary classification regime. After balancing 
-the classes according to funny and not­funny, we optimize the classical log­likelihood and report 
-the classification accuracy. 
-Third Deliverables Details ­<br>
-Implement the following deep learning techniques ­<br>
-1. Deep Feedforward Networks on two types of architectures – a classic, deep rectifier 
-network with heavy dropout, and a slightly more modern, shallower MaxOut. 
-2. Convolutional Neural Networks 
-Tools ­<br>
-1.
-2.
-3.
-4.
-Gensim Package ­ Build word vectors 
-NLTK ­ Tokenization 
-Keras library ­ Deep Learning Techniques 
-Scikit library ­ SVM Classifier 
-References ­<br>
-1. Oliveira and Rodrigo, Humor Detection in Yelp reviews 
+<p>Made feature vectors using Tf-Idf Vectorization and fed this to SVM classifier with linear kernel and got 85.0% accuracy.
+The SVM train function from scikit library of python was used for this.</p>
+
+<h3>
+<a id="deep-feedforward-neural-network" class="anchor" href="#deep-feedforward-neural-network" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Deep Feedforward Neural Network</h3>
+
+<p>Created word vectors of length 100 on the reviews using gensim Word2Vec and fed the 1D feature vector as input to the neural network with a hidden layer and 2 output units. After running for 30 epochs, with 20% test data, the accuracy was 89.87</p>
+
+<h3>
+<a id="convolutional-neural-networks" class="anchor" href="#convolutional-neural-networks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Convolutional Neural Networks</h3>
+
+<h3>
+<a id="references-" class="anchor" href="#references-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>References ­</h3>
+
+<p>Oliveira and Rodrigo, Humor Detection in Yelp reviews 
 URL: ​
 <a href="https://cs224d.stanford.edu/reports/OliveiraLuke.pdf">https://cs224d.stanford.edu/reports/OliveiraLuke.pdf</a>  </p>
       </section>

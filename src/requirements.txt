@@ -7,3 +7,4 @@ To install Keras Library with Theano back-end
 
 sudo pip install git+git://github.com/Theano/Theano.git
 sudo pip install keras
+pip install -r https://raw.githubusercontent.com/dnouri/kfkd-tutorial/master/requirements.txt

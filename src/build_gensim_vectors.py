@@ -16,7 +16,7 @@ for label, review in tagged_reviews:
 	if len(review):
 		sentences.append(review)
 
-model = gensim.models.Word2Vec(sentences, min_count=1)
+model = gensim.models.Word2Vec(sentences, min_count=40)
 
 final = []
 

@@ -5,4 +5,7 @@ src/*.npy
 src/word_vectors.py
 src/*.pyc
 src/test_vectors.py
+src/*.neg
+src/*.pos
 src/src/*
+src/runs
